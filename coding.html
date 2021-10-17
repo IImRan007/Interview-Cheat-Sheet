@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Oops</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="dataStructures.html">Data Structures</a></li>
+        <li><a href="coding.html">Coding</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Coding Interview Questions</h1>
+    </header>
+    <div class="questions">
+      <ol>
+        <li><a href="#last">Get the last element of an array</a></li>
+        <li>
+          <a href="#second-last">How to get second last element of array</a>
+        </li>
+        <li>
+          <a href="#largest">Program to find largest element in an array</a>
+        </li>
+        <li>
+          <a href="#smallest">Program to find smallest element in an array</a>
+        </li>
+        <li>
+          <a href="#middle">Program to find middle element in an array</a>
+        </li>
+
+        <li><a href="#reverse">Program to reverse the array</a></li>
+        <li><a href="#sort">Program to sort the array</a></li>
+        <li><a href="#empty">How will you empty an array in JavaScript?</a></li>
+        <li>
+          <a href="#duplicate"
+            >How will you remove duplicates from a JS array?</a
+          >
+        </li>
+        <li><a href="#string">Reverse string</a></li>
+        <li><a href="#longest">Finding longest word in a string</a></li>
+      </ol>
+    </div>
+    <div class="answers">
+      <ol>
+        <li id="last">
+          Using the array length property: <br />
+          <code
+            >let arry = [1, 2, 3, 4, 5]; <br />
+            let lastElement = arry[arry.length -1]; <br />
+            console.log(lastElement); //Output: 5</code
+          >
+          <br />
+          <br />
+          Using Slice Method: <br />
+          <code
+            >let arry = [1, 2, 3, 4, 5]; <br />
+            let lastElement = arry.slice(-1); <br />
+            console.log(lastElement);</code
+          >
+          <br />
+          <br />
+          Using pop method: <br />
+          <code
+            >let arry = [1, 2, 3, 4, 5]; <br />
+            let lastElement = arry.pop(); <br />
+            console.log(lastElement);</code
+          >
+          <br />
+          As you can see, the pop() method is fastest.
+        </li>
+        <li id="second-last">
+          <code>
+            const myNumbers = [100, 200, 300, 400, 500]; <br />
+            seconLastNumber = myNumbers.slice(-2, -1)[0]) // 400 <br />
+            option two: <br />
+            const seconLastNumber = myNumbers[numbers.length - 2];
+          </code>
+        </li>
+        <li id="largest">
+          <code>
+            var array = [3, 6, 2, 56, 32, 5, 89, 32]; <br />
+            var largest = 0; <br />
+            for (i = 0; i <= largest; i++) { <br />
+            if (array[i] > largest) { <br />
+            var largest = array[i]; <br />
+            } } <br />
+            console.log(largest);
+          </code>
+        </li>
+        <li id="smallest">
+          <code>
+            var arr = [5, 2, 9, 5, 7]; <br />
+            var smallest = arr[0]; <br />
+            for (var i = 1; i < arr.length; i++) { <br />
+            if (arr[i] < smallest) { <br />
+            smallest = arr[i]; <br />
+            } <br />
+            } <br />
+            console.log(smallest);
+          </code>
+        </li>
+        <li id="middle">
+          <code>
+            var arr = [1, 2, 3, 4, 5]; <br />
+            console.log(arr[Math.floor(arr.length / 2)]); o/p - 3
+          </code>
+        </li>
+
+        <li id="reverse">
+          <code>
+            let numbers = [1, 2, 3, 4, 5]; <br />
+            let reversedNumbers = []; <br />
+            for (let i = numbers.length - 1; i >= 0; i--) { <br />
+            reversedNumbers.push(numbers[i]); <br />
+            } <br />
+            console.log(reversedNumbers);
+          </code>
+        </li>
+        <li id="sort">
+          <code>
+            var numbers = [4, 2, 5, 1, 3]; <br />
+            numbers.sort(function (a, b) { <br />
+            return a - b; <br />
+            }); <br />
+            console.log(numbers);
+          </code>
+        </li>
+        <li id="empty">
+          <code>
+            var array1 = [1, 22, 24, 46]; <br />
+            while (array1.length > 0) { <br />
+            array1.pop(); <br />
+            } <br />
+            console.log(array1);
+          </code>
+        </li>
+        <li id="duplicate">
+          <code>
+            let animals = ["Lion", "Rabbit", "Mouse", "Monkey", "Lion", "Ape"];
+            <br />
+            let unique = []; <br />
+            animals.forEach((item) => { <br />
+            if (!unique.includes(item)) { <br />
+            unique.push(item); <br />
+            } <br />
+            }); <br />
+            console.log(unique);
+          </code>
+        </li>
+        <li id="string">
+          <code>
+            function reverseString(str) { <br />
+            var newString = ""; <br />
+            for (var i = str.length - 1; i >= 0; i--) { <br />
+            newString += str[i]; <br />
+            } <br />
+            console.log(newString); <br />
+            } <br />
+            reverseString("hello");
+          </code>
+        </li>
+        <li id="longest">
+          <code>
+            function findLongestWord(str) { <br />
+            var strSplit = str.split(" "); <br />
+            var longestWord = 0; <br />
+            for (var i = 0; i < strSplit.length; i++) { <br />
+            if (strSplit[i].length > longestWord) { <br />
+            longestWord = strSplit[i].length; <br />
+            } <br />
+            } <br />
+            console.log(longestWord); <br />
+            findLongestWord("The quick brown fox jumped over the lazy dog");
+          </code>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

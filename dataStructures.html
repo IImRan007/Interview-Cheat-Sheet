@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Oops</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="dataStructures.html">Data Structures</a></li>
+        <li><a href="coding.html">Coding</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Data Structures Interview</h1>
+    </header>
+    <div class="questions">
+      <ol>
+        <li><a href="#ds">What is Data Structure?</a></li>
+        <li><a href="#type-ds">Describe the types of Data Structures?</a></li>
+        <li>
+          <a href="#app-ds">List the area of applications of Data Structure.</a>
+        </li>
+        <li>
+          <a href="#file-storage"
+            >What is the difference between file structure and storage
+            structure?</a
+          >
+        </li>
+        <li>
+          <a href="#diff-ds"
+            >What are the various operations that can be performed on different
+            Data Structures?</a
+          >
+        </li>
+        <li>
+          <a href="#list-ds"
+            >List the data structures which are used in RDBMS, Network Data
+            Modal, and Hierarchical Data Model.</a
+          >
+        </li>
+        <li>
+          <a href="#recursion"
+            >Which data structure is used to perform recursion?</a
+          >
+        </li>
+        <li>
+          <a href="#stack">What is a Stack?</a>
+        </li>
+        <li>
+          <a href="#stack-app"
+            >List the area of applications where stack data structure can be
+            used?</a
+          >
+        </li>
+        <li>
+          <a href="#op-stack"
+            >What are the operations that can be performed on a stack?</a
+          >
+        </li>
+        <li>
+          <a href="#overflow">Write the stack overflow condition.</a>
+        </li>
+        <li>
+          <a href="#push-pop">What is the difference between PUSH and POP?</a>
+        </li>
+        <li>
+          <a href="#postfix">What is a postfix expression?</a>
+        </li>
+        <li>
+          <a href="#array">What is an array?</a>
+        </li>
+        <li>
+          <a href="#one-d"
+            >How to reference all the elements in a one-dimension array?</a
+          >
+        </li>
+        <li>
+          <a href="#mul-d">What is a multidimensional array?</a>
+        </li>
+        <li>
+          <a href="#mem"
+            >How are the elements of a 2D array are stored in the memory?</a
+          >
+        </li>
+        <li>
+          <a href="#link-list">Define Linked List Data structure</a>
+        </li>
+        <li>
+          <a href="#cons"
+            >Are linked lists considered linear or non-linear data
+            structures?</a
+          >
+        </li>
+        <li>
+          <a href="#ad-array"
+            >What are the advantages of Linked List over an array?</a
+          >
+        </li>
+        <li>
+          <a href="#d-link">What is doubly linked list?</a>
+        </li>
+        <li>
+          <a href="#queue">Define the queue data structure.</a>
+        </li>
+        <li>
+          <a href="#queue-app"
+            >List some applications of queue data structure.</a
+          >
+        </li>
+        <li>
+          <a href="#dr-queue"
+            >What are the drawbacks of array implementation of Queue?</a
+          >
+        </li>
+        <li>
+          <a href="#dequeue">What is a dequeue?</a>
+        </li>
+        <li>
+          <a href="#minimum"
+            >What is the minimum number of queues that can be used to implement
+            a priority queue?</a
+          >
+        </li>
+        <li>
+          <a href="#tree">Define the tree data structure.</a>
+        </li>
+        <li>
+          <a href="#tree-list">List the types of tree.</a>
+        </li>
+        <li>
+          <a href="#bin">What are Binary trees?</a>
+        </li>
+        <li>
+          <a href="#nodes"
+            >What is the maximum number of nodes in a binary tree of height
+            k?</a
+          >
+        </li>
+        <li>
+          <a href="#suits"
+            >Which data structure suits the most in the tree construction?</a
+          >
+        </li>
+        <li>
+          <a href="#prop">State the properties of B Tree.</a>
+        </li>
+        <li>
+          <a href="#tree-ds">List some applications of Tree-data structure?</a>
+        </li>
+        <li>
+          <a href="#graph">Define the graph data structure?</a>
+        </li>
+        <li>
+          <a href="#cycle">Differentiate among cycle, path, and circuit?</a>
+        </li>
+        <li>
+          <a href="#imple"
+            >Mention the data structures which are used in graph
+            implementation.</a
+          >
+        </li>
+        <li>
+          <a href="#bfs"
+            >Which data structures are used in BFS and DFS algorithm?</a
+          >
+        </li>
+        <li>
+          <a href="#graph-data"
+            >What are the applications of Graph data structure?</a
+          >
+        </li>
+        <li>
+          <a href="#scene">In what scenario, Binary Search can be used?</a>
+        </li>
+        <li>
+          <a href="#advantage"
+            >What are the advantages of Binary search over linear search?</a
+          >
+        </li>
+        <li>
+          <a href="#selection">What are the advantages of Selecetion Sort?</a>
+        </li>
+        <li>
+          <a href="#multi-linked"
+            >List Some Applications of Multilinked Structures?</a
+          >
+        </li>
+        <li>
+          <a href="#null">What is the difference between NULL and VOID?</a>
+        </li>
+        <li>
+          <a href="#hash">What is Hash Map?</a>
+        </li>
+      </ol>
+    </div>
+    <div class="answers">
+      <ol>
+        <li id="ds">
+          The data structure is a way that specifies how to organize and
+          manipulate the data. It also defines the relationship between them.
+          Some examples of Data Structures are arrays, Linked List, Stack,
+          Queue, etc.
+        </li>
+        <li id="type-ds">
+          Data Structures are mainly classified into two types: Linear Data
+          Structure: A data structure is called linear if all of its elements
+          are arranged in the sequential order. In linear data structures, the
+          elements are stored in a non-hierarchical way where each item has the
+          successors and predecessors except the first and last element.
+          Non-Linear Data Structure: The Non-linear data structure does not form
+          a sequence i.e. each item or element is connected with two or more
+          other items in a non-linear arrangement. The data elements are not
+          arranged in the sequential structure.
+        </li>
+        <li id="app-ds">
+          Data structures are applied extensively in the following areas of
+          computer science: Compiler Design, Operating System, Database
+          Management System, Statistical analysis package, Numerical Analysis,
+          Graphics, Artificial Intelligence, Simulation
+        </li>
+        <li id="file-storage">
+          Storage structure: It is the representation of the data structure in
+          the computer memory. File structure: It is the representation of the
+          storage structure in the auxiliary memory.
+        </li>
+        <li id="diff-ds">
+          Insertion ? Add a new data item in the given collection of data items.
+          Deletion ? Delete an existing data item from the given collection of
+          data items. Traversal ? Access each data item exactly once so that it
+          can be processed. Searching ? Find out the location of the data item
+          if it exists in the given collection of data items. Sorting ?
+          Arranging the data items in some order i.e. in ascending or descending
+          order in case of numerical data and in dictionary order in case of
+          alphanumeric data.
+        </li>
+        <li id="list-ds">
+          RDBMS uses Array data structure Network data model uses Graph
+          Hierarchal data model uses Trees
+        </li>
+        <li id="recursion">
+          Stack data structure is used in recursion due to its last in first out
+          nature. Operating system maintains the stack in order to save the
+          iteration variables at each function call.
+        </li>
+        <li id="stack">
+          Stack is an ordered list in which, insertion and deletion can be
+          performed only at one end that is called the top. It is a recursive
+          data structure having pointer to its top element. The stack is
+          sometimes called as Last-In-First-Out (LIFO) list i.e. the element
+          which is inserted first in the stack will be deleted last from the
+          stack.
+        </li>
+        <li id=stack-app"">
+          Expression evaluation Backtracking Memory Management Function calling
+          and return
+        </li>
+        <li id="op-stack">Push Operations Pop Operations Peek Operations</li>
+        <li id="overflow">Overflow occurs when top = Maxsize -1</li>
+        <li id="push-pop">
+          PUSH: PUSH specifies that data is being "inserted" into the stack.
+          POP: POP specifies data retrieval. It means that data is being deleted
+          from the stack.
+        </li>
+        <li id="postfix">
+          An expression in which operators follow the operands is known as
+          postfix expression. The main benefit of this form is that there is no
+          need to group sub-expressions in parentheses or to consider operator
+          precedence. The expression "a + b" will be represented as "ab+" in
+          postfix notation.
+        </li>
+        <li id="array">
+          Arrays are defined as the collection of similar types of data items
+          stored at contiguous memory locations. It is the simplest data
+          structure in which each data element can be randomly accessed by using
+          its index number.
+        </li>
+        <li id="one-d">
+          It can be done by using an indexed loop such that the counter runs
+          from 0 to the array size minus one. In this manner, you can reference
+          all the elements in sequence by using the loop counter as the array
+          subscript.
+        </li>
+        <li id="mul-d">
+          The multidimensional array can be defined as the array of arrays in
+          which, the data is stored in tabular form consists of rows and
+          columns. 2D arrays are created to implement a relational database
+          lookalike data structure. It provides ease of holding the bulk of data
+          at once which can be passed to any number of functions wherever
+          required.
+        </li>
+        <li id="mem">
+          Row-Major Order: In row-major ordering, all the rows of the 2D array
+          are stored into the memory contiguously. First, the 1st row of the
+          array is stored into the memory completely, then the 2nd row of the
+          array is stored into the memory completely and so on till the last
+          row. Column-Major Order: In column-major ordering, all the columns of
+          the 2D array are stored into the memory contiguously. first, the 1st
+          column of the array is stored into the memory completely, then the 2nd
+          row of the array is stored into the memory completely and so on till
+          the last column of the array.
+        </li>
+        <li id="link-list">
+          Linked List is the collection of randomly stored data objects called
+          nodes. In Linked List, each node is linked to its adjacent node
+          through a pointer. A node contains two fields, i.e. Data Field and
+          Link Field.
+        </li>
+        <li id="cons">
+          A linked list is considered both linear and non-linear data structure
+          depending upon the situation. On the basis of data storage, it is
+          considered as a non-linear data structure. On the basis of the access
+          strategy, it is considered as a linear data-structure.
+        </li>
+        <li id="ad-array">
+          The size of a linked list can be incremented at runtime which is
+          impossible in the case of the array. The List is not required to be
+          contiguously present in the main memory, if the contiguous space is
+          not available, the nodes can be stored anywhere in the memory
+          connected through the links. The List is dynamically stored in the
+          main memory and grows as per the program demand while the array is
+          statically stored in the main memory, size of which must be declared
+          at compile time. The number of elements in the linked list are limited
+          to the available memory space while the number of elements in the
+          array is limited to the size of an array.
+        </li>
+        <li id="d-link">
+          The doubly linked list is a complex type of linked list in which a
+          node contains a pointer to the previous as well as the next node in
+          the sequence. In a doubly linked list, a node consists of three parts:
+          node data pointer to the next node in sequence (next pointer) pointer
+          to the previous node (previous pointer).
+        </li>
+        <li id="queue">
+          A queue can be defined as an ordered list which enables insert
+          operations to be performed at one end called REAR and delete
+          operations to be performed at another end called FRONT.
+        </li>
+        <li id="queue-app">
+          Queues are widely used as waiting lists for a single shared resource
+          like a printer, disk, CPU. Queues are used in the asynchronous
+          transfer of data (where data is not being transferred at the same rate
+          between two processes) for eg. pipes, file IO, sockets. Queues are
+          used as buffers in most of the applications like MP3 media player, CD
+          player, etc. Queues are used to maintain the playlist in media players
+          to add and remove the songs from the play-list. Queues are used in
+          operating systems for handling interrupts.
+        </li>
+        <li id="dr-queue">
+          Memory Wastage: The space of the array, which is used to store queue
+          elements, can never be reused to store the elements of that queue
+          because the elements can only be inserted at front end and the value
+          of front might be so high so that, all the space before that, can
+          never be filled. Array Size: There might be situations in which, we
+          may need to extend the queue to insert more elements if we use an
+          array to implement queue, It will almost be impossible to extend the
+          array size, therefore deciding the correct array size is always a
+          problem in array implementation of queue.
+        </li>
+        <li id="dequeue">
+          Dequeue (also known as double-ended queue) can be defined as an
+          ordered set of elements in which the insertion and deletion can be
+          performed at both the ends, i.e. front and rear.
+        </li>
+        <li id="minimum">
+          Two queues are needed. One queue is used to store the data elements,
+          and another is used for storing priorities.
+        </li>
+        <li id="tree">
+          The Tree is a recursive data structure containing the set of one or
+          more data nodes where one node is designated as the root of the tree
+          while the remaining nodes are called as the children of the root. The
+          nodes other than the root node are partitioned into the nonempty sets
+          where each one of them is to be called sub-tree.
+        </li>
+        <li id="tree-list">
+          General Tree Forests Binary Tree Binary Search Tree Expression Tree
+          Tournament Tree
+        </li>
+        <li id="bin">
+          A binary Tree is a special type of generic tree in which, each node
+          can have at most two children. Binary tree is generally partitioned
+          into three disjoint subsets, i.e. the root of the node, left sub-tree
+          and Right binary sub-tree.
+        </li>
+        <li id="nodes">2k+1-1 where k >= 1</li>
+        <li id="suits">Queue data structure</li>
+        <li id="prop">
+          A B tree of order m contains all the properties of an M way tree. In
+          addition, it contains the following properties. Every node in a B-Tree
+          contains at most m children. Every node in a B-Tree except the root
+          node and the leaf node contain at least m/2 children. The root nodes
+          must have at least 2 nodes. All leaf nodes must be at the same level.
+        </li>
+        <li id="tree-ds">
+          The manipulation of Arithmetic expression, Symbol Table construction,
+          Syntax analysis Hierarchal data model
+        </li>
+        <li id="graph">
+          A graph G can be defined as an ordered set G(V, E) where V(G)
+          represents the set of vertices and E(G) represents the set of edges
+          which are used to connect these vertices. A graph can be seen as a
+          cyclic tree, where the vertices (Nodes) maintain any complex
+          relationship among them instead of having parent-child relations.
+        </li>
+        <li id="cycle">
+          Path: A Path is the sequence of adjacent vertices connected by the
+          edges with no restrictions. Cycle: A Cycle can be defined as the
+          closed path where the initial vertex is identical to the end vertex.
+          Any vertex in the path can not be visited twice Circuit: A Circuit can
+          be defined as the closed path where the intial vertex is identical to
+          the end vertex. Any vertex may be repeated.
+        </li>
+        <li id="imple">
+          In sequential representation, Adjacency matrix is used. In Linked
+          representation, Adjacency list is used.
+        </li>
+        <li id="bfs">
+          In BFS algorithm, Queue data structure is used. In DFS algorithm,
+          Stack data structure is used.
+        </li>
+        <li id="graph-data">
+          Graphs are used in circuit networks where points of connection are
+          drawn as vertices and component wires become the edges of the graph.
+          Graphs are used in transport networks where stations are drawn as
+          vertices and routes become the edges of the graph. Graphs are used in
+          maps that draw cities/states/regions as vertices and adjacency
+          relations as edges. Graphs are used in program flow analysis where
+          procedures or modules are treated as vertices and calls to these
+          procedures are drawn as edges of the graph.
+        </li>
+        <li id="scene">
+          Binary Search algorithm is used to search an already sorted list. The
+          algorithm follows divide and conqer approach
+        </li>
+        <li id="advantage">
+          There are relatively less number of comparisons in binary search than
+          that in linear search. In average case, linear search takes O(n) time
+          to search a list of n elements while Binary search takes O(log n) time
+          to search a list of n elements.
+        </li>
+        <li id="selection">
+          It is simple and easy to implement. It can be used for small data
+          sets. It is 60 per cent more efficient than bubble sort.
+        </li>
+        <li id="multi-linked">Sparse matrix, Index generation.</li>
+        <li id="null">
+          Null is actually a value, whereas Void is a data type identifier. A
+          null variable simply indicates an empty value, whereas void is used to
+          identify pointers as having no initial size.
+        </li>
+        <li id="hash">Hash tables are a complex data structure capable of storing large amounts of information and retrieving specific elements efficiently. This data structure relies on the concept of key/value pairs, where the “key” is a searched string and the “value” is the data paired with that key.</li>
+      </ol>
+    </div>
+  </body>
+</html>
