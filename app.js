@@ -95,13 +95,68 @@
 // }
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 
-var arr = [5, 2, 9, 5, 7];
-var smallest = arr[0];
+// var arr = [5, 2, 9, 5, 7];
+// var smallest = arr[0];
 
-for (var i = 1; i < arr.length; i++) {
-  if (arr[i] < smallest) {
-    smallest = arr[i];
-  }
-}
+// for (var i = 1; i < arr.length; i++) {
+//   if (arr[i] < smallest) {
+//     smallest = arr[i];
+//   }
+// }
 
-console.log(smallest);
+// console.log(smallest);
+
+// Print duplicate characters from string
+
+// function removeDuplicateCharacters(string) {
+//   return string
+//     .split("")
+//     .filter(function (item, pos, self) {
+//       return self.indexOf(item) == pos;
+//     })
+//     .join("");
+// }
+// console.log(removeDuplicateCharacters("baraban"));
+
+// Write a program in JavaScript to check if two strings are anagrams of each other or not
+
+// function checkStringsAnagram(a, b) {
+//   let len1 = a.length;
+//   let len2 = b.length;
+//   if (len1 !== len2) {
+//     console.log("Invalid Input");
+//     return;
+//   }
+//   let str1 = a.split("").sort().join("");
+//   let str2 = b.split("").sort().join("");
+//   if (str1 === str2) {
+//     console.log("True");
+//   } else {
+//     console.log("False");
+//   }
+// }
+// checkStringsAnagram("indian", "ndiani");
+
+// Program to find vowels in a string
+
+// const vowels = ["a", "e", "i", "o", "u"];
+
+// function countVowel(str) {
+//   // initialize count
+//   let count = 0;
+
+//   // loop through string to test if each character is a vowel
+//   for (let letter of str.toLowerCase()) {
+//     if (vowels.includes(letter)) {
+//       count++;
+//     }
+//   }
+
+//   // return number of vowels
+//   return count;
+// }
+
+// // take input
+// let result = countVowel("Hello my name is Imran");
+
+// console.log(result);

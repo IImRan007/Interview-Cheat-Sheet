@@ -45,6 +45,20 @@
         </li>
         <li><a href="#string">Reverse string</a></li>
         <li><a href="#longest">Finding longest word in a string</a></li>
+        <li>
+          <a href="#char"
+            >Print duplicate characters from string in javascript</a
+          >
+        </li>
+        <li>
+          <a href="#anar"
+            >Write a program in JavaScript to check if two strings are anagrams
+            of each other or not</a
+          >
+        </li>
+        <li>
+          <a href="#vowels">Program to find vowels in a string</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -178,6 +192,55 @@
             } <br />
             console.log(longestWord); <br />
             findLongestWord("The quick brown fox jumped over the lazy dog");
+          </code>
+        </li>
+        <li id="char">
+          <code>
+            function removeDuplicateCharacters(string) { <br />
+            return string <br />
+            .split("") <br />
+            .filter(function (item, pos, self) { <br />
+            return self.indexOf(item) == pos; <br />
+            }) <br />
+            .join(""); <br />
+            } <br />
+            console.log(removeDuplicateCharacters("baraban"));
+          </code>
+        </li>
+        <li id="anar">
+          <code>
+            function checkStringsAnagram(a, b) { <br />
+            let len1 = a.length; <br />
+            let len2 = b.length; <br />
+            if (len1 !== len2) { <br />
+            console.log("Invalid Input"); <br />
+            return; <br />
+            } <br />
+            let str1 = a.split("").sort().join(""); <br />
+            let str2 = b.split("").sort().join(""); <br />
+            if (str1 === str2) { <br />
+            console.log("True"); <br />
+            } else { <br />
+            console.log("False"); <br />
+            } <br />
+            } <br />
+            checkStringsAnagram("indian", "ndiani");
+          </code>
+        </li>
+        <li id="vowels">
+          <code>
+            const vowels = ["a", "e", "i", "o", "u"]; <br />
+            function countVowel(str) { <br />
+            let count = 0; <br />
+            for (let letter of str.toLowerCase()) { <br />
+            if (vowels.includes(letter)) { <br />
+            count++; <br />
+            } <br />
+            } <br />
+            return count; <br />
+            } <br />
+            let result = countVowel("Hello my name is Imran"); <br />
+            console.log(result);
           </code>
         </li>
       </ol>
