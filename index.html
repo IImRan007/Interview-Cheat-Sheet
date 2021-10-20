@@ -60,6 +60,15 @@
           <a href="#type-constructor">Types of constructor</a>
         </li>
         <li>
+          <a href="#extend">Extend keyword</a>
+        </li>
+        <li>
+          <a href="#static">Static keyword</a>
+        </li>
+        <li>
+          <a href="#super">Super keyword</a>
+        </li>
+        <li>
           <a href="#class-structure">
             What is the difference between a class and a structure?
           </a>
@@ -156,6 +165,9 @@
             Can you call the base class method without creating an instance?
           </a>
         </li>
+        <li>
+          <a href="#int">What is an interface?</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -215,13 +227,22 @@
           entity that has some specific attributes and methods.
         </li>
         <li id="constructors">
-          The constructor has the same name as the class. A constructor is also
-          a special kind of method. It is used to initialize objects of the
-          class.
+          The constructor() method is a special method for creating and
+          initializing objects created within a class. <br />
+          The constructor() method is called automatically when a class is
+          initiated, and it has to have the exact name "constructor", in fact,
+          if you do not have a constructor method, JavaScript will add an
+          invisible and empty constructor method.
         </li>
         <li id="type-constructor">
           Private Constructor Default Constructor Copy Constructor Static
           Constructor Parameterized Constructor
+        </li>
+        <li id="extend">
+          The extends keyword is used to create a child class of another class
+          (parent). The child class inherits all the methods from another class.
+          Inheritance is useful for code reusability: reuse properties and
+          methods of an existing class when you create a new class.
         </li>
         <li id="class-structure">
           Class: Class is basically a User-defined blueprint from which objects
@@ -365,6 +386,22 @@
           •Yes, you are allowed to call the base class without instantiating it
           but there are some conditions that are applicable: •If it is a static
           method •The base class is inherited by some other subclass
+        </li>
+        <li id="int">
+          An interface refers to a special type of class, which contains
+          methods, but not their definition. Only the declaration of methods is
+          allowed inside an interface. To use an interface, you cannot create
+          objects. Instead, you need to implement that interface and define the
+          methods for their implementation.
+        </li>
+        <li id="static">
+          The static keyword defines static methods for classes. Static methods
+          are called directly on the class without creating an instance/object
+          of the class.
+        </li>
+        <li id="super">
+          The super keyword is used to call the constructor of its parent class
+          to access the parent's properties and methods.
         </li>
       </ol>
     </div>

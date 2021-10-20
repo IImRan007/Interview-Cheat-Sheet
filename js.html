@@ -26,6 +26,36 @@
         </li>
         <li><a href="#methods">Array Methods</a></li>
         <li><a href="#string-methods">String Methods</a></li>
+        <li><a href="#sync">Synchronous</a></li>
+        <li><a href="#async">Asynchronous</a></li>
+        <li><a href="#async/await">Async/Await</a></li>
+        <li><a href="#high-order">Higher Order Functions</a></li>
+        <li><a href="#this">this</a></li>
+        <li>
+          <a href="#call"> Explain call(), apply() and, bind() methods.</a>
+        </li>
+        <li><a href="#closure">Closure</a></li>
+        <li><a href="#object">What are object prototypes?</a></li>
+        <li><a href="#callback">Callback</a></li>
+        <li><a href="#memory">Memorization</a></li>
+        <li>
+          <a href="#const"
+            >What is the use of a constructor function in javascript?</a
+          >
+        </li>
+        <li><a href="#dom">DOM</a></li>
+        <li><a href="#arrow">What are arrow functions?</a></li>
+        <li>
+          <a href="#rest">What is the rest parameter and spread operator?</a>
+        </li>
+        <li><a href="#promise">Promises</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#generator">Generator</a></li>
+        <li><a href="#weak">Weak Set</a></li>
+        <li><a href="#map">Weak Map</a></li>
+        <li><a href="#des">Object Destructuring</a></li>
+        <li><a href="#temp">Temporal Dead Zone</a></li>
+        <li><a href="#obj">Object Methods</a></li>
       </ol>
     </div>
     <div class="answers">
@@ -121,6 +151,167 @@
           toUpperCase()-Converts a string to uppercase letters. <br />
           trim()-Removes whitespace from both ends of a string. <br />
           valueOf()-Returns the primitive value of a String object.
+        </li>
+        <li id="sync">
+          Synchronous JavaScript: As the name suggests synchronous means to be
+          in a sequence, i.e. every statement of the code gets executed one by
+          one. So, basically a statement has to wait for the earlier statement
+          to get executed.
+        </li>
+        <li id="async">
+          Asynchronous JavaScript: Asynchronous code allows the program to be
+          executed immediately where the synchronous code will block further
+          execution of the remaining code until it finishes the current one.
+        </li>
+        <li id="async/await">
+          Async/await makes your code look synchronous, and in a way it makes it
+          behave more synchronously. The await keyword blocks execution of all
+          the code that follows it until the promise fulfills, exactly as it
+          would with a synchronous operation. It does allow other tasks to
+          continue to run in the meantime, but the awaited code is blocked.
+        </li>
+        <li id="high-order">
+          Functions that operate on other functions, either by taking them as
+          arguments or by returning them, are called higher-order functions.
+          Higher order functions are a result of functions being first-class
+          citizens in javascript.
+        </li>
+        <li id="this">
+          The “this” keyword refers to the object that the function is a
+          property of. The value of “this” keyword will always depend on the
+          object that is invoking the function.
+        </li>
+        <li id="call">
+          call()-It’s a predefined method in javascript. This method invokes a
+          method (function) by specifying the owner object. call() method allows
+          an object to use the method (function) of another object. <br />
+          apply()-The apply method is similar to the call() method. The only
+          difference is that, call() method takes arguments separately whereas,
+          apply() method takes arguments as an array. <br />
+          bind()-This method returns a new function, where the value of “this”
+          skeyword will be bound to the owner object, which is provided as a
+          parameter.
+        </li>
+        <li id="closure">
+          Closure gives you access to an outer function’s scope from an inner
+          function. In JavaScript, closures are created every time a function is
+          created, at function creation time.
+        </li>
+        <li id="object">
+          All javascript objects inherit properties from a prototype.On top of
+          the chain is Object.prototype. Every prototype inherits properties and
+          methods from the Object.prototype. A prototype is a blueprint of an
+          object. Prototype allows us to use properties and methods on an object
+          even if the properties and methods do not exist on the current object.
+        </li>
+        <li id="callback">
+          A callback is a function that will be executed after another function
+          gets executed. In javascript, functions are treated as first-class
+          citizens, they can be used as an argument of another function, can be
+          returned by another function and can be used as a property of an
+          object. <br />
+          Functions that are used as an argument to another function are called
+          callback functions.
+        </li>
+        <li id="memory">
+          Memoization is a form of caching where the return value of a function
+          is cached based on its parameters. If the parameter of that function
+          is not changed, the cached version of the function is returned.
+        </li>
+        <li id="const">
+          Constructor functions are used to create objects in javascript. f we
+          want to create multiple objects having similar properties and methods,
+          constructor functions are used.
+        </li>
+        <li id="dom">
+          DOM stands for Document Object Model. DOM is a programming interface
+          for HTML and XML documents. When the browser tries to render a HTML
+          document, it creates an object based on the HTML document called DOM.
+          Using this DOM, we can manipulate or change various elements inside
+          the HTML document.
+        </li>
+        <li id="arrow">
+          Arrow functions were introduced in the ES6 version of javascript. They
+          provide us with a new and shorter syntax for declaring functions.
+          Arrow functions can only be used as a function expression.
+        </li>
+        <li id="rest">
+          Rest parameter ( … )-It provides an improved way of handling
+          parameters of a function. Using the rest parameter syntax, we can
+          create functions that can take a variable number of arguments. Any
+          number of arguments will be converted into an array using the rest
+          parameter. It also helps in extracting all or some parts of the
+          arguments. Rest parameter can be used by applying three dots (...)
+          before the parameters. <br />
+          Spread operator (…)-Although the syntax of spread operator is exactly
+          the same as the rest parameter, spread operator is used to spread an
+          array, and object literals. We also use spread operators where one or
+          more arguments are expected in a function call.
+        </li>
+        <li id="promise">
+          Promises are used to handle asynchronous operations in javascript.
+          Promise object has four states - <br />
+          Pending - Initial state of promise. This state represents that the
+          promise has neither been fulfilled nor been rejected, it is in the
+          pending state. <br />
+          Fulfilled - This state represents that the promise has been fulfilled,
+          meaning the async operation is completed. <br />
+          Rejected - This state represents that the promise has been rejected
+          for some reason, meaning the async operation has failed. <br />
+          Settled - This state represents that the promise has been either
+          rejected or fulfilled.
+        </li>
+        <li id="classes">
+          Introduced in the ES6 version, classes are nothing but syntactic
+          sugars for constructor functions. They provide a new way of declaring
+          constructor functions in javascript.
+        </li>
+        <li id="generator">
+          Introduced in ES6 version, generator functions are a special class of
+          functions. They can be stopped midway and then continue from where it
+          had stopped. Generator functions are declared with the function*
+          keyword instead of the normal function keyword:
+        </li>
+        <li id="weak">
+          In javascript, Set is a collection of unique and ordered elements.
+          Just like Set, WeakSet is also a collection of unique and ordered
+          elements with some key differences: <br />
+          Weakset contains only objects and no other type. An object inside the
+          weakset is referenced weakly. This means, if the object inside the
+          weakset does not have a reference, it will be garbage collected.
+          <br />
+          Unlike Set, WeakSet only has three methods, add() , delete() and has()
+          .
+        </li>
+        <li id="map">
+          In javascript, Map is used to store key-value pairs. The key-value
+          pairs can be of both primitive and non-primitive types. WeakMap is
+          similar to Map with key differences: The keys and values in weakmap
+          should always be an object. If there are no references to the object,
+          the object will be garbage collected
+        </li>
+        <li id="des">
+          Object destructuring is a new way to extract elements from an object
+          or an array
+        </li>
+        <li id="temp">
+          Temporal Dead Zone is a behaviour that occurs with variables declared
+          using let and const keywords. It is a behaviour where we try to access
+          a variable before it is initialized.
+        </li>
+        <li id="obj">
+          Object.create()-The Object.create() method creates a new object, using
+          an existing object as the prototype of the newly created object.
+          <br />
+          Object.entries()-This is a simple function which converts JS objects
+          to an array of arrays. With inner array is pair of key and value of
+          the object. <br />Object.keys()-This function picks only keys (or
+          property labels) of objects and returns an array.<br />Object.values()-This
+          function picks only values of objects and returns an array. <br />
+          Object.freeze()-This function freezes the object for any further
+          changes (key or values). It may not throw any error (unless you are in
+          strict mode) but there will be no effect of value change on your
+          object. <br />
         </li>
       </ol>
     </div>
