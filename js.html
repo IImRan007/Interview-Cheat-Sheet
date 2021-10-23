@@ -24,6 +24,24 @@
     <div class="questions">
       <ol>
         <li>
+          <a href="#js">What is JavaScript?</a>
+        </li>
+        <li>
+          <a href="#feat">List some features of JavaScript.</a>
+        </li>
+        <li>
+          <a href="#dev"
+            >Who developed JavaScript, and what was the first name of
+            JavaScript?</a
+          >
+        </li>
+        <li>
+          <a href="#adv">List some of the advantages of JavaScript.</a>
+        </li>
+        <li>
+          <a href="#diss">List some of the disadvantages of JavaScript.</a>
+        </li>
+        <li>
           <a href="#num">How would you check if a number is an integer?</a>
         </li>
         <li><a href="#methods">Array Methods</a></li>
@@ -46,6 +64,9 @@
           >
         </li>
         <li><a href="#dom">DOM</a></li>
+        <li><a href="#bom">What is BOM?</a></li>
+        <li><a href="#use">What is the use of window object?</a></li>
+        <li><a href="#his">What is the use of history object?</a></li>
         <li><a href="#arrow">What are arrow functions?</a></li>
         <li>
           <a href="#rest">What is the rest parameter and spread operator?</a>
@@ -58,10 +79,75 @@
         <li><a href="#des">Object Destructuring</a></li>
         <li><a href="#temp">Temporal Dead Zone</a></li>
         <li><a href="#obj">Object Methods</a></li>
+        <li><a href="#cre">How to create objects in JavaScript?</a></li>
+        <li><a href="#nan">What does the isNaN() function?</a></li>
+        <li>
+          <a href="#cli"
+            >Difference between Client side JavaScript and Server side
+            JavaScript?</a
+          >
+        </li>
+        <li>
+          <a href="#eve"
+            >What's the difference between event.preventDefault() and
+            event.stopPropagation() methods in JavaScript?</a
+          >
+        </li>
+        <li>
+          <a href="#view"
+            >What is the difference between View state and Session state?</a
+          >
+        </li>
+        <li>
+          <a href="#pop">What are the pop-up boxes available in JavaScript?</a>
+        </li>
+        <li>
+          <a href="#os"
+            >How can we detect OS of the client machine using JavaScript?</a
+          >
+        </li>
+        <li>
+          <a href="#bug">What is the use of debugger keyword in JavaScript?</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
       <ol>
+        <li id="js">
+          JavaScript is a dynamic computer programming language. It is
+          lightweight and most commonly used as a part of web pages, whose
+          implementations allow client-side script to interact with the user and
+          make dynamic pages. It is an interpreted programming language with
+          object-oriented capabilities.
+        </li>
+        <li id="feat">
+          Lightweight <br />
+          Interpreted programming language <br />
+          Good for the applications which are network-centric <br />
+          Complementary to Java <br />
+          Complementary to HTML <br />
+          Open source <br />
+          Cross-platform
+        </li>
+        <li id="dev">
+          JavaScript was developed by Brendan Eich, who was a Netscape
+          programmer. Brendan Eich developed this new scripting language in just
+          ten days in the year September 1995. At the time of its launch,
+          JavaScript was initially called Mocha. After that, it was called Live
+          Script and later known as JavaScript.
+        </li>
+        <li id="adv">
+          Server interaction is less <br />
+          Feedback to the visitors is immediate <br />
+          Interactivity is high <br />
+          Interfaces are richer
+        </li>
+        <li id="diss">
+          No support for multithreading <br />
+          No support for multiprocessing <br />
+          Reading and writing of files is not allowed <br />
+          No support for networking applications.
+        </li>
         <li id="num">Number.isInteger()</li>
         <li id="methods">
           concat()-Joins two or more arrays, and returns a copy of the joined
@@ -232,6 +318,29 @@
           Using this DOM, we can manipulate or change various elements inside
           the HTML document.
         </li>
+        <li id="bom">
+          BOM stands for Browser Object Model. It provides interaction with the
+          browser. The default object of a browser is a window. So, you can call
+          all the functions of the window by specifying the window or directly.
+          The window object provides various properties like document, history,
+          screen, navigator, location, innerHeight, innerWidth.
+        </li>
+
+        <li id="use">
+          The window object is created automatically by the browser that
+          represents a window of a browser. It is not an object of JavaScript.
+          It is a browser object. The window object is used to display the popup
+          dialog box
+        </li>
+        <li id="his">
+          The history object of a browser can be used to switch to history pages
+          such as back and forward from the current page or another page. There
+          are three methods of history object. <br />
+          history.back() - It loads the previous page. <br />
+          history.forward() - It loads the next page. <br />
+          history.go(number) - The number may be positive for forward, negative
+          for backward. It loads the given page number.
+        </li>
         <li id="arrow">
           Arrow functions were introduced in the ES6 version of javascript. They
           provide us with a new and shorter syntax for declaring functions.
@@ -314,6 +423,59 @@
           changes (key or values). It may not throw any error (unless you are in
           strict mode) but there will be no effect of value change on your
           object. <br />
+          The Object.getPrototypeOf()-method returns the prototype (i.e. the
+          value of the internal [[Prototype]] property) of the specified object.
+          <br />
+          Object.prototype.constructor - The constructor property returns a
+          reference to the Object constructor function that created the instance
+          object.
+        </li>
+        <li id="cre">
+          There are 3 ways to create an object in JavaScript. <br />
+          By object literal <br />
+          By creating an instance of Object <br />
+          By Object Constructor
+        </li>
+        <li id="nan">
+          The isNan() function returns true if the variable value is not a
+          number.
+        </li>
+        <li id="cli">
+          Client-side JavaScript comprises the basic language and predefined
+          objects which are relevant to running JavaScript in a browser. The
+          client-side JavaScript is embedded directly by in the HTML pages. The
+          browser interprets this script at runtime. <br />
+          Server-side JavaScript also resembles client-side JavaScript. It has a
+          relevant JavaScript which is to run in a server. The server-side
+          JavaScript are deployed only after compilation.
+        </li>
+        <li id="eve">
+          In JavaScript, the event.preventDefault() method is used to prevent
+          the default behavior of an element. <br />
+          On the other hand, the event.stopPropagation() method is used to stop
+          the propagation of an event or stop the event from occurring in the
+          bubbling or capturing phase.
+        </li>
+        <li id="view">
+          "View state" is specific to a page in a session whereas "Session
+          state" is specific to a user or browser that can be accessed across
+          all pages in the web application.
+        </li>
+        <li id="pop">
+          Alert Box <br />
+          Confirm Box <br />
+          Prompt Box
+        </li>
+        <li id="os">
+          The navigator.appVersion string can be used to detect the operating
+          system on the client machine.
+        </li>
+        <li id="bug">
+          JavaScript debugger keyword sets the breakpoint through the code
+          itself. The debugger stops the execution of the program at the
+          position it is applied. Now, we can start the flow of execution
+          manually. If an exception occurs, the execution will stop again on
+          that particular line.
         </li>
       </ol>
     </div>

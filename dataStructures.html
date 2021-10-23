@@ -12,7 +12,9 @@
       <ul>
         <li><a href="/" target="_blank">Oops</a></li>
         <li><a href="js.html" target="_blank">JavaScript</a></li>
-        <li><a href="dataStructures.html" target="_blank">Data Structures</a></li>
+        <li>
+          <a href="dataStructures.html" target="_blank">Data Structures</a>
+        </li>
         <li><a href="coding.html" target="_blank">Coding</a></li>
       </ul>
     </nav>
@@ -119,9 +121,7 @@
           >
         </li>
         <li>
-          <a href="#implement"
-            >How to implement a queue using stack?</a
-          >
+          <a href="#implement">How to implement a queue using stack?</a>
         </li>
         <li>
           <a href="#dequeue">What is a dequeue?</a>
@@ -203,13 +203,21 @@
           <a href="#hash">What is Hash Map?</a>
         </li>
         <li>
-          <a href="#hashmap">What is the requirement for an object to be used as key or value in HashMap?</a>
+          <a href="#hashmap"
+            >What is the requirement for an object to be used as key or value in
+            HashMap?</a
+          >
         </li>
         <li>
-          <a href="#basic">What is the time complexity of basic operations get() and put() in HashMap class?</a>
+          <a href="#basic"
+            >What is the time complexity of basic operations get() and put() in
+            HashMap class?</a
+          >
         </li>
         <li>
-          <a href="#lru">Which data structures are used for implementing LRU cache?</a>
+          <a href="#lru"
+            >Which data structures are used for implementing LRU cache?</a
+          >
         </li>
         <li>
           <a href="#prio">What is a priority queue?</a>
@@ -227,16 +235,28 @@
           <a href="#avl">What is an AVL Tree?</a>
         </li>
         <li>
-          <a href="#bfs">Breadth First Search</a>
+          <a href="#bfs">Breadth First Search bfs</a>
         </li>
         <li>
-          <a href="#dfs">Depth First Search</a>
+          <a href="#dfs">Depth First Search dfs</a>
         </li>
         <li>
           <a href="#topo">What is topological sorting in a graph?</a>
         </li>
         <li>
           <a href="#heap">What is a heap data structure?</a>
+        </li>
+        <li>
+          <a href="#algo">What is an Algorithm?</a>
+        </li>
+        <li>
+          <a href="#need">Need for Algorithm?</a>
+        </li>
+        <li>
+          <a href="#comp">What is the Complexity of Algorithm?</a>
+        </li>
+        <li>
+          <a href="#rev">Write an algorithm to reverse a string. </a>
         </li>
       </ol>
     </div>
@@ -297,7 +317,7 @@
           which is inserted first in the stack will be deleted last from the
           stack.
         </li>
-        <li id=stack-app"">
+        <li id="stack-app">
           Expression evaluation Backtracking Memory Management Function calling
           and return
         </li>
@@ -495,68 +515,180 @@
           null variable simply indicates an empty value, whereas void is used to
           identify pointers as having no initial size.
         </li>
-        <li id="hash">Hash tables are a complex data structure capable of storing large amounts of information and retrieving specific elements efficiently. This data structure relies on the concept of key/value pairs, where the “key” is a searched string and the “value” is the data paired with that key.</li>
-        <li id="implement">A queue can be implemented using two stacks. Let q be the queue andstack1 and stack2 be the 2 stacks for implementing q. We know that stack supports push, pop, peek operations and using these operations, we need to emulate the operations of queue - enqueue and dequeue. Hence, queue q can be implemented in two methods (Both the methods use auxillary space complexity of O(n)): <br> By making enqueue operation costly: <br>
-          Here, the oldest element is always at the top of stack1 which ensures dequeue operation to occur in O(1) time complexity.
-          To place element at top of stack1, stack2 is used.
-          Pseudocode: <br>
-          
-          Enqueue: Here time complexity will be O(n)
-          enqueue(q, data):
-            While stack1 is not empty:
-                Push everything from stack1 to stack2.
-                Push data to stack1
-                Push everything back to stack1. <br>
-          Dequeue: Here time complexity will be O(1) <br>
-          
-          deQueue(q):
-            If stack1 is empty then error
-            else
-                Pop an item from stack1 and return it <br>
-          By making dequeue operation costly: <br>
-          Here, for enqueue operation, the new element is pushed at the top of stack1. Here, the enqueue operation time complexity is O(1).
-          In dequeue, if stack2 is empty, all elements from stack1 are moved to stack2 and top of stack2 is the result. Basically, reversing the list by pushing to a stack and returning the first enqueued element. This operation of pushing all elements to new stack takes O(n) complexity.
-          Pseudocode: <br>
-          Enqueue: Time complexity: O(1)
-          enqueue(q, data):
-              Push data to stack1 <br>
-          Dequeue: Time complexity: O(n) <br>
-          dequeue(q): <br>
-              If both stacks are empty then raise error.
-              If stack2 is empty:
-                   While stack1 is not empty:
-                       push everything from stack1 to stack2.
-              Pop the element from stack2 and return it.</li>
-              <li id="hashmap">The key or value object that gets used in hashmap must implement equals() and hashcode() method. <br>
-                The hash code is used when inserting the key object into the map and equals method is used when trying to retrieve a value from the map.</li>
-                <li id="basic">The time complexity is O(1) assuming that the hash function used in hash map distributes elements uniformly among the buckets.</li>
-                <li id="lru">LRU cache or Least Recently Used cache allows quick identification of an element that hasn’t been put to use for the longest time by organizing items in order of use. In order to achieve this, two data structures are used: <br> Queue <br> Hashmap</li>
-                <li id="prio">A priority queue is an abstract data type that is like a normal queue but has priority assigned to elements.
-                  Elements with higher priority are processed before the elements with a lower priority.
-                  In order to implement this, a minimum of two queues are required - one for the data and the other to store the priority.</li>
-                  <li id="dup">No, duplicate keys cannot be inserted in HashMap. If you try to insert any entry with an existing key, then the old value would be overridden with the new value. Doing this will not change the size of HashMap.
-                    This is why the keySet() method returns all keys as a SET in Java since it doesn't allow duplicates.</li>
-                    <li id="t-traverse">Tree traversal is a process of visiting all the nodes of a tree. Since root (head) is the first node and all nodes are connected via edges (or links) we always start with that node. There are three ways which we use to traverse a tree − <br> Inorder <br> Preorder <br> Postorder</li>
-                    <li id="bst">A binary search tree (BST) is a variant of binary tree data structure that stores data in a very efficient manner such that the values of the nodes in the left sub-tree are less than the value of the root node, and the values of the nodes on the right of the root node are correspondingly higher than the root.</li>
-                    <li id="avl">AVL trees are height balancing BST. AVL tree checks the height of left and right sub-trees and assures that the difference is not more than 1. This difference is called Balance Factor and is calculates as. BalanceFactor = height(left subtree) − height(right subtree)</li>
-                    <li id="bfs">Breadth first search is a graph traversal algorithm that starts traversing the graph from root node and explores all the neighbouring nodes. Then, it selects the nearest node and explore all the unexplored nodes. The algorithm follows the same process for each of the nearest node until it finds the goal.</li>
-                    <li id="dfs">Depth first search (DFS) algorithm starts with the initial node of the graph G, and then goes to deeper and deeper until we find the goal node or the node which has no children. The algorithm, then backtracks from the dead end towards the most recent node that is yet to be completely unexplored.</li>
-                    <li id="topo">Topological sorting is a linear ordering of vertices such that for every directed edge ij, vertex i comes before j in the ordering.
-                      Topological sorting is only possible for Directed Acyclic Graph (DAG).
-                      Applications: <br>
-                      jobs scheduling from the given dependencies among jobs. <br>
-                      ordering of formula cell evaluation in spreadsheets <br>
-                      ordering of compilation tasks to be performed in make files,
-                      data serialization <br>
-                      resolving symbol dependencies in linkers.</li>
-                      <li id="heap">Heap is a special tree-based non-linear data structure in which the tree is a complete binary tree. A binary tree is said to be complete if all levels are completely filled except possibly the last level and the last level has all elements towards as left as possible. Heaps are of two types: <br>
+        <li id="hash">
+          Hash tables are a complex data structure capable of storing large
+          amounts of information and retrieving specific elements efficiently.
+          This data structure relies on the concept of key/value pairs, where
+          the “key” is a searched string and the “value” is the data paired with
+          that key.
+        </li>
+        <li id="implement">
+          A queue can be implemented using two stacks. Let q be the queue
+          andstack1 and stack2 be the 2 stacks for implementing q. We know that
+          stack supports push, pop, peek operations and using these operations,
+          we need to emulate the operations of queue - enqueue and dequeue.
+          Hence, queue q can be implemented in two methods (Both the methods use
+          auxillary space complexity of O(n)): <br />
+          By making enqueue operation costly: <br />
+          Here, the oldest element is always at the top of stack1 which ensures
+          dequeue operation to occur in O(1) time complexity. To place element
+          at top of stack1, stack2 is used. Pseudocode: <br />
 
-                        Max-Heap:
-                        In a Max-Heap the data element present at the root node must be greatest among all the data elements present in the tree.
-                        This property should be recursively true for all sub-trees of that binary tree. <br>
-                        Min-Heap:
-                        In a Min-Heap the data element present at the root node must be the smallest (or minimum) among all the data elements present in the tree.
-                        This property should be recursively true for all sub-trees of that binary tree.</li>
+          Enqueue: Here time complexity will be O(n) enqueue(q, data): While
+          stack1 is not empty: Push everything from stack1 to stack2. Push data
+          to stack1 Push everything back to stack1. <br />
+          Dequeue: Here time complexity will be O(1) <br />
+
+          deQueue(q): If stack1 is empty then error else Pop an item from stack1
+          and return it <br />
+          By making dequeue operation costly: <br />
+          Here, for enqueue operation, the new element is pushed at the top of
+          stack1. Here, the enqueue operation time complexity is O(1). In
+          dequeue, if stack2 is empty, all elements from stack1 are moved to
+          stack2 and top of stack2 is the result. Basically, reversing the list
+          by pushing to a stack and returning the first enqueued element. This
+          operation of pushing all elements to new stack takes O(n) complexity.
+          Pseudocode: <br />
+          Enqueue: Time complexity: O(1) enqueue(q, data): Push data to stack1
+          <br />
+          Dequeue: Time complexity: O(n) <br />
+          dequeue(q): <br />
+          If both stacks are empty then raise error. If stack2 is empty: While
+          stack1 is not empty: push everything from stack1 to stack2. Pop the
+          element from stack2 and return it.
+        </li>
+        <li id="hashmap">
+          The key or value object that gets used in hashmap must implement
+          equals() and hashcode() method. <br />
+          The hash code is used when inserting the key object into the map and
+          equals method is used when trying to retrieve a value from the map.
+        </li>
+        <li id="basic">
+          The time complexity is O(1) assuming that the hash function used in
+          hash map distributes elements uniformly among the buckets.
+        </li>
+        <li id="lru">
+          LRU cache or Least Recently Used cache allows quick identification of
+          an element that hasn’t been put to use for the longest time by
+          organizing items in order of use. In order to achieve this, two data
+          structures are used: <br />
+          Queue <br />
+          Hashmap
+        </li>
+        <li id="prio">
+          A priority queue is an abstract data type that is like a normal queue
+          but has priority assigned to elements. Elements with higher priority
+          are processed before the elements with a lower priority. In order to
+          implement this, a minimum of two queues are required - one for the
+          data and the other to store the priority.
+        </li>
+        <li id="dup">
+          No, duplicate keys cannot be inserted in HashMap. If you try to insert
+          any entry with an existing key, then the old value would be overridden
+          with the new value. Doing this will not change the size of HashMap.
+          This is why the keySet() method returns all keys as a SET in Java
+          since it doesn't allow duplicates.
+        </li>
+        <li id="t-traverse">
+          Tree traversal is a process of visiting all the nodes of a tree. Since
+          root (head) is the first node and all nodes are connected via edges
+          (or links) we always start with that node. There are three ways which
+          we use to traverse a tree − <br />
+          Inorder <br />
+          Preorder <br />
+          Postorder
+        </li>
+        <li id="bst">
+          A binary search tree (BST) is a variant of binary tree data structure
+          that stores data in a very efficient manner such that the values of
+          the nodes in the left sub-tree are less than the value of the root
+          node, and the values of the nodes on the right of the root node are
+          correspondingly higher than the root.
+        </li>
+        <li id="avl">
+          AVL trees are height balancing BST. AVL tree checks the height of left
+          and right sub-trees and assures that the difference is not more than
+          1. This difference is called Balance Factor and is calculates as.
+          BalanceFactor = height(left subtree) − height(right subtree)
+        </li>
+        <li id="bfs">
+          Breadth first search is a graph traversal algorithm that starts
+          traversing the graph from root node and explores all the neighbouring
+          nodes. Then, it selects the nearest node and explore all the
+          unexplored nodes. The algorithm follows the same process for each of
+          the nearest node until it finds the goal.
+        </li>
+        <li id="dfs">
+          Depth first search (DFS) algorithm starts with the initial node of the
+          graph G, and then goes to deeper and deeper until we find the goal
+          node or the node which has no children. The algorithm, then backtracks
+          from the dead end towards the most recent node that is yet to be
+          completely unexplored.
+        </li>
+        <li id="topo">
+          Topological sorting is a linear ordering of vertices such that for
+          every directed edge ij, vertex i comes before j in the ordering.
+          Topological sorting is only possible for Directed Acyclic Graph (DAG).
+          Applications: <br />
+          jobs scheduling from the given dependencies among jobs. <br />
+          ordering of formula cell evaluation in spreadsheets <br />
+          ordering of compilation tasks to be performed in make files, data
+          serialization <br />
+          resolving symbol dependencies in linkers.
+        </li>
+        <li id="heap">
+          Heap is a special tree-based non-linear data structure in which the
+          tree is a complete binary tree. A binary tree is said to be complete
+          if all levels are completely filled except possibly the last level and
+          the last level has all elements towards as left as possible. Heaps are
+          of two types: <br />
+
+          Max-Heap: In a Max-Heap the data element present at the root node must
+          be greatest among all the data elements present in the tree. This
+          property should be recursively true for all sub-trees of that binary
+          tree. <br />
+          Min-Heap: In a Min-Heap the data element present at the root node must
+          be the smallest (or minimum) among all the data elements present in
+          the tree. This property should be recursively true for all sub-trees
+          of that binary tree.
+        </li>
+        <li id="algo">
+          An algorithm is a well-defined computational procedure that takes some
+          values or the set of values, as an input and produces a set of values
+          or some values, as an output.
+        </li>
+        <li id="need">
+          The algorithm improves the efficiency of an existing technique. <br />
+          To compare the performance of the algorithm with respect to other
+          techniques. <br />
+          The algorithm gives a strong description of requirements and goal of
+          the problems to the designer. <br />
+          The algorithm provides a reasonable understanding of the flow of the
+          program. <br />
+          The algorithm measures the performance of the methods in different
+          cases (Best cases, worst cases, average cases). <br />
+          The algorithm identifies the resources (input/output, memory) cycles
+          required by the algorithm. <br />
+          With the help of an algorithm, we can measure and analyze the
+          complexity time and space of the problems. <br />
+          The algorithm also reduces the cost of design.
+        </li>
+        <li id="comp">
+          The complexity of the algorithm is a way to classify how efficient an
+          algorithm is compared to alternative ones. Its focus is on how
+          execution time increases with the data set to be processed.
+        </li>
+        <li id="rev">
+          Step1: start <br />
+          Step2: Take two variable i and j <br />
+          Step3: do length (string)-1, to set J at last position <br />
+          Step4: do string [0], to set i on the first character. <br />
+          Step5: string [i] is interchanged with string[j] <br />
+          Step6: Increment i by 1 <br />
+          Step7: Increment j by 1 <br />
+          Step8: if i>j then go to step3 <br />
+          Step9: Stop
+        </li>
       </ol>
     </div>
   </body>

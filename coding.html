@@ -61,6 +61,9 @@
         <li>
           <a href="#vowels">Program to find vowels in a string</a>
         </li>
+        <li>
+          <a href="#list">Reverse Linked List</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -243,6 +246,36 @@
             } <br />
             let result = countVowel("Hello my name is Imran"); <br />
             console.log(result);
+          </code>
+        </li>
+        <li id="list">
+          First, I’m going to initialize 3 pointers: <br />
+          prev -> Because it’a a singly linked list, a node does not have
+          reference to its previous node. That’s why we need prev pointer to
+          store a previous element of the node beforehand. <br />
+          curr -> to know which node we are currently at. <br />
+          nextTemp -> to store the next node before changing the reference. If
+          we change the current’s next value without saving it, we are going to
+          lose our next pointer in the iteration.
+          <code>
+            var reverseList = function(head) { <br />
+            let prev = null; <br />
+            let curr = head; <br />
+            let nextTemp = null; <br />
+
+            while(curr!= null) { <br />
+            nextTemp = curr.next; // As I explained earlier, I save the next
+            pointer in the temp variable. <br />
+            curr.next = prev; // Then I reverse the pointer of the current node
+            to its previous node. <br />
+            prev = curr; // The previous node becomes the node we are currently
+            at. <br />
+            curr = nextTemp; // And the current nodes becomes the next node we
+            saved earlier. And we keep iterating. <br />
+            } <br />
+            return prev // At the end, our previous node will be the head node
+            of the new list. <br />
+            }; <br />
           </code>
         </li>
       </ol>
