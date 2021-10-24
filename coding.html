@@ -64,6 +64,9 @@
         <li>
           <a href="#list">Reverse Linked List</a>
         </li>
+        <li>
+          <a href="#linear">Implementation of Linear Search in JavaScript</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -276,6 +279,29 @@
             return prev // At the end, our previous node will be the head node
             of the new list. <br />
             }; <br />
+          </code>
+        </li>
+        <li id="linear">
+          We can traverse through the given list using a for loop. Let's look at
+          the implementation of Linear Search: <br />
+          <code>
+            function linearSearch(arr, key){ <br />
+            for(let i = 0; i < arr.length; i++){ <br />
+            if(arr[i] === key){ <br />
+            return i <br />
+            } <br />
+            } <br />
+            return -1 <br />
+            } <br />
+            Here we are going through all the elements in an array and comparing
+            each element with the key. If we find a match, we return the index
+            of the element. In our case, the variable i keeps track of where we
+            are in the array, and if we find a match, we return the current
+            value for i. In case the element doesn't exist in our list, the
+            linearSearch function won't return any i value from the loop. We
+            just return -1 after the loop to show that the function didn't find
+            the desired element. <br />
+            Time Complexity: O(n)
           </code>
         </li>
       </ol>
