@@ -67,6 +67,21 @@
         <li>
           <a href="#linear">Implementation of Linear Search in JavaScript</a>
         </li>
+        <li>
+          <a href="#head">Inserting a Node at the Head of a Linked List</a>
+        </li>
+        <li>
+          <a href="#tail">Inserting a Node at the Tail of a Linked List</a>
+        </li>
+        <li>
+          <a href="#random"
+            >Inserting a node at given random position in a singly linked
+            list</a
+          >
+        </li>
+        <li>
+          <a href="#del">Deleting the first node in a singly linked list</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -304,6 +319,118 @@
             Time Complexity: O(n)
           </code>
         </li>
+        <li id="head">
+          The problem is straightforward, let’s move to the solution: <br />
+          Initialize a node class. <br />
+          Create a new node with the given value. <br />
+          If the list is empty, set the new node as the head and return it.
+          <br />
+          If the list is not empty, set the next of the new node as the head and
+          then change the head pointer to point to the new node. <br />
+          Return the new head of the updated linked list. <br />
+          O(1) time complexity. <br />
+          <code>
+            class SinglyLinkedListNode{ <br />
+            constructor(val){ <br />
+            this.val = val <br />
+            this.next = null <br />
+            } <br />
+            } <br />
+            <br />
+            function insertNodeAtHead(head, data){ <br />
+            let newNode = new SinglyLinkedListNode(data) <br />
+            if(!head){ <br />
+            head = newNode <br />
+            return head <br />
+            }else{ <br />
+            newNode.next = head <br />
+            head = newNode <br />
+            } <br />
+            return head <br />
+            }
+          </code>
+        </li>
+        <li id="tail">
+          Initialize a node class. <br />
+          Create a new node with the given value. <br />
+          If the list is empty, set the new node as the head and return it.
+          <br />
+          If the list is not empty, create a variable called current to traverse
+          the list and set it to the head. <br />
+          Loop through the next variables in each node till the last node.
+          <br />
+          Change the next of the last node to the new node. <br />
+          Return the head of the updated linked list. <br />
+          Since we traverse the given list from head to end, time complexity of
+          this solution is O(n) <br />
+          <code>
+            class SinglyLinkedListNode { <br />
+            constructor(val) { <br />
+            this.val = val <br />
+            this.next = null <br />
+            } <br />
+            } <br />
+            <br />
+            function insertNodeAtTail(head, data) { <br />
+            let newNode = new SinglyLinkedListNode(data)<br />
+            if (!head) {<br />
+            head = newNode <br />
+            return head <br />
+            }<br />
+            let current = head <br />
+            while (current.next) { <br />
+            current = current.next <br />
+            } <br />
+            current.next = newNode <br />
+            return head <br />
+            } <br />
+          </code>
+        </li>
+        <li id="random">
+          To implement this operation we will have to traverse the list until we
+          reach the desired position node. We will then assign the newNode’s
+          next pointer to the next node to the position node. The position
+          node’s next pointer can then be updated to point to the newNode.
+          <br />
+          <code>
+            // A helper function getAt() is defined to get to the desired
+            position. This function can also be later used for performing delete
+            operation from a given position. <br />
+            LinkedList.prototype.getAt = function(index){ <br />
+            let counter = 0; <br />
+            let node = this.head; <br />
+            while (node) {<br />
+            if (counter === index) {<br />
+            return node;<br />
+            }<br />
+            counter++;<br />
+            node = node.next;<br />
+            }<br />
+            return null;<br />
+            }<br />
+            // The insertAt() function contains the steps to insert a node at a
+            given index.<br />
+            LinkedList.prototype.insertAt = function(data, index){<br />
+            if (!this.head) {<br />
+            this.head = new Node(data);<br />
+            return;<br />
+            }<br />
+            // if new node needs to be inserted at the front of the list i.e.
+            before the head. <br />
+            if (index === 0) {<br />
+            this.head = new Node(data, this.head);<br />
+            return;<br />
+            }<br />
+            // else, use getAt() to find the previous node.<br />
+            const previous = this.getAt(index - 1);<br />
+            let newNode = new Node(data);<br />
+            newNode.next = previous.next;<br />
+            previous.next = newNode; <br />
+            return this.head<br />
+            }<br />
+          </code>
+        </li>
+        <li id="del"></li>
       </ol>
     </div>
   </body>

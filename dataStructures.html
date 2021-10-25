@@ -47,6 +47,11 @@
           >
         </li>
         <li>
+          <a href="#searc"
+            >What are the types of searching used in Data Structures?</a
+          >
+        </li>
+        <li>
           <a href="#recursion"
             >Which data structure is used to perform recursion?</a
           >
@@ -78,6 +83,14 @@
           <a href="#array">What is an array?</a>
         </li>
         <li>
+          <a href="#dyna">What are dynamic arrays?</a>
+        </li>
+        <li>
+          <a href="#charac"
+            >Name some characteristics of Array Data Structure.</a
+          >
+        </li>
+        <li>
           <a href="#one-d"
             >How to reference all the elements in a one-dimension array?</a
           >
@@ -98,6 +111,9 @@
             >Are linked lists considered linear or non-linear data
             structures?</a
           >
+        </li>
+        <li>
+          <a href="#tip">What are the different types of linked lists? </a>
         </li>
         <li>
           <a href="#ad-array"
@@ -159,7 +175,12 @@
           <a href="#tree-ds">List some applications of Tree-data structure?</a>
         </li>
         <li>
-          <a href="#graph">Define the graph data structure?</a>
+          <a href="#graph">Define the graph data structure and uses?</a>
+        </li>
+        <li>
+          <a href="#rep"
+            >What are the Data Structures that are used to represent graphs?</a
+          >
         </li>
         <li>
           <a href="#cycle">Differentiate among cycle, path, and circuit?</a>
@@ -274,10 +295,85 @@
           <a href="#circle">Circular Linked List</a>
         </li>
         <li>
-          <a href="#note">Expression parsing or notation.</a>
+          <a href="#note"
+            >Expression parsing or notation (Infix, Prefix and Postfix).</a
+          >
         </li>
         <li>
           <a href="#line">Linear Search</a>
+        </li>
+        <li>
+          <a href="#lif">LIFO FIFO</a>
+        </li>
+        <li>
+          <a href="#prio">What is a priority queue?</a>
+        </li>
+        <li>
+          <a href="#hp">Binary Heap</a>
+        </li>
+        <li>
+          <a href="#what">What Data Structures make use of pointers?</a>
+        </li>
+        <li>
+          <a href="#over"
+            >What is the meaning of the stack overflow condition?</a
+          >
+        </li>
+        <li>
+          <a href="#bal">What is a Balanced Tree and why is that important?</a>
+        </li>
+        <li>
+          <a href="#bin">What is binary search?</a>
+        </li>
+        <li>
+          <a href="#lin">What is linear search?</a>
+        </li>
+        <li>
+          <a href="#tim"
+            >What are the time complexities of linear search and binary
+            search?</a
+          >
+        </li>
+        <li>
+          <a href="#trav">Tell me about tree traversal.</a>
+        </li>
+        <li>
+          <a href="#kruk">How does Kruskal's algorithm work?</a>
+        </li>
+        <li>
+          <a href="#prim">Prim's Algorithm</a>
+        </li>
+        <li>
+          <a href="#mst">What is a minimum spanning tree (MST)?</a>
+        </li>
+        <li>
+          <a href="#hanoi">Explain the Tower of Hanoi Problem.</a>
+        </li>
+        <li>
+          <a href="#rec">What are recursive algorithms?</a>
+        </li>
+        <li>
+          <a href="#why">Explain why stack is a recursive data structure?</a>
+        </li>
+        <li>
+          <a href="#comp">What is merge sort time complexity?</a>
+        </li>
+        <li>
+          <a href="#shell">What is shell sort?</a>
+        </li>
+        <li>
+          <a href="#is">What is quicksort time complexity?</a>
+        </li>
+        <li>
+          <a href="#red">What is a Red-Black Tree?</a>
+        </li>
+        <li>
+          <a href="#occ">When does the worst case of QuickSort occur?</a>
+        </li>
+        <li>
+          <a href="#are"
+            >Which data structures are used for the BFS and DFS of a graph?</a
+          >
         </li>
       </ol>
     </div>
@@ -290,11 +386,12 @@
           Queue, etc.
         </li>
         <li id="type-ds">
-          Data Structures are mainly classified into two types: Linear Data
-          Structure: A data structure is called linear if all of its elements
-          are arranged in the sequential order. In linear data structures, the
-          elements are stored in a non-hierarchical way where each item has the
-          successors and predecessors except the first and last element.
+          Data Structures are mainly classified into two types: <br />
+          Linear Data Structure: A data structure is called linear if all of its
+          elements are arranged in the sequential order. In linear data
+          structures, the elements are stored in a non-hierarchical way where
+          each item has the successors and predecessors except the first and
+          last element. <br />
           Non-Linear Data Structure: The Non-linear data structure does not form
           a sequence i.e. each item or element is connected with two or more
           other items in a non-linear arrangement. The data elements are not
@@ -313,13 +410,16 @@
         </li>
         <li id="diff-ds">
           Insertion ? Add a new data item in the given collection of data items.
+          <br />
           Deletion ? Delete an existing data item from the given collection of
-          data items. Traversal ? Access each data item exactly once so that it
-          can be processed. Searching ? Find out the location of the data item
-          if it exists in the given collection of data items. Sorting ?
-          Arranging the data items in some order i.e. in ascending or descending
-          order in case of numerical data and in dictionary order in case of
-          alphanumeric data.
+          data items. <br />
+          Traversal ? Access each data item exactly once so that it can be
+          processed. <br />
+          Searching ? Find out the location of the data item if it exists in the
+          given collection of data items. <br />
+          Sorting ? Arranging the data items in some order i.e. in ascending or
+          descending order in case of numerical data and in dictionary order in
+          case of alphanumeric data.
         </li>
         <li id="list-ds">
           RDBMS uses Array data structure Network data model uses Graph
@@ -490,6 +590,10 @@
           which are used to connect these vertices. A graph can be seen as a
           cyclic tree, where the vertices (Nodes) maintain any complex
           relationship among them instead of having parent-child relations.
+          <br />
+          Uses: Google Maps <br />
+          Linkedin <br />
+          Facebook <br />
         </li>
         <li id="cycle">
           Path: A Path is the sequence of adjacent vertices connected by the
@@ -542,7 +646,8 @@
           amounts of information and retrieving specific elements efficiently.
           This data structure relies on the concept of key/value pairs, where
           the “key” is a searched string and the “value” is the data paired with
-          that key.
+          that key. <br />
+          Complexity: O(1)
         </li>
         <li id="implement">
           A queue can be implemented using two stacks. Let q be the queue
@@ -768,6 +873,164 @@
           item is checked and if a match is found then that particular item is
           returned, otherwise the search continues till the end of the data
           collection.
+        </li>
+        <li id="searc">
+          Linear Search. <br />
+          Binary Search. <br />
+          Jump Search. <br />
+          Interpolation Search. <br />
+          Exponential Search. <br />
+        </li>
+        <li id="dyna">
+          A dynamic array is an array with a modification that is automatic
+          resizing. This means that the array expands when we add more elements.
+          This helps to provide flexibility as size is not fixed. So, there’s no
+          need to know the size in advance.
+        </li>
+        <li id="charac">
+          Array elements are stored in contiguous memory blocks in the primary
+          memory. <br />
+          Array name represents its base address. <br />
+          The base address is the address of the first element of the array.
+          <br />
+          Array’s index starts with 0 and ends with size-1.
+        </li>
+        <li id="tip">
+          Singly Linked list <br />
+          Doubly Linked list <br />
+          Circular Linked list <br />
+          Doubly Circular Linked list
+        </li>
+        <li id="lif">
+          LIFO: (Last-In-First-Out) Last inserted element is removed first in
+          the LIFO principle. Example: Stack follows LIFO. <br />
+          FIFO: (First-In-First-Out) First Element (first to be inserted) is
+          taken out first. Example: Queue follows FIFO
+        </li>
+        <li id="prio">
+          A priority queue is like a normal queue of elements but here each
+          element has some priority. The elements in the priority queue occur in
+          this order only. <br />
+          Say, we have some values like 1, 2, 7, 8, 14, 31 inserted in a
+          priority queue with an ordering based on least values to the greatest
+          value. Therefore, the 1 number will have the highest priority while 31
+          will have the lowest priority.
+        </li>
+        <li id="hp">
+          A binary heap is a complete binary tree that satisfies the heap
+          ordering property. A Binary Heap can either be Min Heap or Max Heap.
+          It’s a complete tree, thus it is suitable for being stored in an
+          array.
+        </li>
+        <li id="what">
+          Stack <br />
+          Queue <br />
+          Linked List <br />
+          Binary Tree
+        </li>
+        <li id="over">
+          When a stack is completely full and we try to insert more elements
+          onto the stack then this condition is called stack overflow condition.
+          Here, top=maxsize-1, and no further elements can be inserted.
+        </li>
+        <li id="bal">
+          A tree is perfectly height-balanced if the left and right subtrees of
+          any node are of the same height. We can also say that a tree is
+          height-balanced if the heights of the left and right subtrees of each
+          node differ by a maximum of one unit.
+        </li>
+        <li id="rep">
+          Adjacency matrix <br />
+          Adjacency list <br />
+          And adjacency set
+        </li>
+        <li id="bin">
+          In this type of search technique, we divide the sorted array or list
+          into two halves. This is done to save time in searching. Here, we
+          consider arrays in sorted form only.
+        </li>
+        <li id="lin">
+          Linear search is a technique in which we traverse a list in a
+          sequential manner to find an element. When we find the element that is
+          required, we return the index or position of that element.
+        </li>
+        <li id="tim">Linear Search-O(N) Binary Search- O(log 2 N)</li>
+        <li id="trav">
+          Tree traversal is a process that goes through the entire tree in a
+          particular manner. Depending upon the order of traversal, we have
+          different types: <br />
+          Inorder Traversal (Left, Root, Right) <br />
+          Preorder Traversal (Root, Left, Right) <br />
+          Postorder Traversal (Left, Right, Root)
+        </li>
+        <li id="kruk">
+          Kruskal algorithm treats a graph as a forest and every node as an
+          individual tree. A tree connects to another only and only if it has
+          the least cost among all available choices without violating Minimum
+          Spanning Tree (MST) properties.
+        </li>
+        <li id="prim">
+          Prim's Algorithm is used to find the minimum spanning tree from a
+          graph. Prim's algorithm finds the subset of edges that includes every
+          vertex of the graph such that the sum of the weights of the edges can
+          be minimized. <br />
+          Prim's algorithm starts with the single node and explore all the
+          adjacent nodes with all the connecting edges at every step. The edges
+          with the minimal weights causing no cycles in the graph got selected.
+        </li>
+        <li id="mst">
+          It is a spanning tree that has the minimum weight among all the
+          spanning trees of the same graph.
+        </li>
+        <li id="hanoi">
+          The Tower of Hanoi is a problem that comprises three rods and multiple
+          disks. <br />
+          At the start, all the disks are placed on one rod, one over the other
+          in increasing order. <br />
+          The aim of this problem is to move the stack of disks from the
+          starting rod to another rod, following these rules as below: <br />
+          A disk cannot be placed on top of a smaller disk <br />
+          No disk can be placed on top of the smaller disk.
+        </li>
+        <li id="rec">
+          Recursion in general is a function calling itself. Extending the same
+          logic for Algorithms, we can say that an algorithm that calls itself
+          is a recursive algorithm. One good example of their use would be
+          searching through a file system. Usually, they are used when the
+          iterative approach is not useful for complex problems.
+        </li>
+        <li id="why">
+          A stack is a recursive data structure because: <br />
+          A stack can either be empty or <br />
+          It will have a top pointer and the rest part apart from the top is
+          also a stack by itself, thus it’s recursive.
+        </li>
+        <li id="comp">The time complexity of MergeSort is O(n*log n)</li>
+        <li id="shell">
+          Shell sort is a sorting algorithm based on the insertion sort
+          algorithm. <br />
+          This algorithm is highly efficient in sorting. This algorithm tries to
+          avoid large shifts as in the case of insertion sort if the smaller
+          value is to the far right and has to be moved to the far left.
+        </li>
+        <li id="is">Worst-case time complexity is O(n^2)</li>
+        <li id="red">
+          A red-black tree is a binary tree that has nodes represented by two
+          colors: red and black. The tree follows specific properties. <br />
+          These include: <br />
+          The root node of the tree is always black. <br />
+          Every path from the root to any of the leaf nodes should have the same
+          number of black nodes. <br />
+          No two red nodes can be adjacent to each other.
+        </li>
+        <li id="occ">
+          It occurs when the picked pivot is an extreme (smallest or largest)
+          element. Usually, when the input array is sorted or reverse sorted, it
+          also leads to the worst case.
+        </li>
+        <li id="are">
+          For BFS - Queue Data Structure <br />
+          For DFS - Stack Data Structure
         </li>
       </ol>
     </div>
