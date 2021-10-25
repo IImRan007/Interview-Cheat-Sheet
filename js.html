@@ -46,6 +46,7 @@
         </li>
         <li><a href="#methods">Array Methods</a></li>
         <li><a href="#string-methods">String Methods</a></li>
+        <li><a href="#math">Math Object</a></li>
         <li><a href="#sync">Synchronous</a></li>
         <li><a href="#async">Asynchronous</a></li>
         <li><a href="#async/await">Async/Await</a></li>
@@ -108,6 +109,33 @@
         </li>
         <li>
           <a href="#bug">What is the use of debugger keyword in JavaScript?</a>
+        </li>
+        <li>
+          <a href="#prop">Event Propagation</a>
+        </li>
+        <li>
+          <a href="#scope">Scope Chain and Lexical Scoping</a>
+        </li>
+        <li>
+          <a href="#deleg">Event Delegation</a>
+        </li>
+        <li>
+          <a href="#debounce">Debouncing</a>
+        </li>
+        <li>
+          <a href="#throt">Throttling</a>
+        </li>
+        <li>
+          <a href="#cors">Cross-Origin Resource Sharing (CORS)</a>
+        </li>
+        <li>
+          <a href="#preflight">Preflight Request</a>
+        </li>
+        <li>
+          <a href="#set-time">setTimeout() method</a>
+        </li>
+        <li>
+          <a href="#set-interval">setInterval() method</a>
         </li>
       </ol>
     </div>
@@ -239,6 +267,20 @@
           toUpperCase()-Converts a string to uppercase letters. <br />
           trim()-Removes whitespace from both ends of a string. <br />
           valueOf()-Returns the primitive value of a String object.
+        </li>
+        <li id="math">
+          1. Math.round(x) - Returns x rounded to its nearest integer <br />
+          2. Math.ceil(x) - Returns x rounded up to its nearest integer <br />
+          3. Math.floor(x) - Returns x rounded down to its nearest integer
+          <br />
+          4. Math.trunc(x) - Returns the integer part of x <br />
+          5. Math.round(x) - Returns the nearest integer <br />
+          6. Math.sign(x) - Returns if x is negative, null or positive <br />
+          Ex: Math.sign(-4); // returns -1 Math.sign(0); // returns 0
+          Math.sign(4); // returns 1<br />
+          7. Math.pow(x, y) - Returns the value of x to the power of y <br />
+          8. Math.sqrt(x) - Returns the square root of x <br />
+          9. Math.abs(x) - Returns the absolute (positive) value of x <br />
         </li>
         <li id="sync">
           Synchronous JavaScript: As the name suggests synchronous means to be
@@ -476,6 +518,87 @@
           position it is applied. Now, we can start the flow of execution
           manually. If an exception occurs, the execution will stop again on
           that particular line.
+        </li>
+        <li id="prop">
+          Event Propagation mode determines in which order the elements receive
+          the event. <br />
+          Event Bubbling and Capturing are two ways of event propagation in the
+          HTML DOM API, when an event occurs in an element inside another
+          element, and both elements have registered a handle for that event.
+          <br />
+          The top-down process is called the capturing phase. In the capturing
+          phase, events propagate from the Window down through the DOM tree to
+          the target node. <br />
+          The bottom-up process is called the bubblling phase. In the bubbling
+          phase, the exact opposite occurs. In this phase event propagates or
+          bubbles back up the DOM tree, from the target element up to the
+          Window, visiting all of the ancestors of the target element one by
+          one.
+        </li>
+        <li id="scope">
+          Scope Chain: It is the process in which, JavaScript engine searches
+          for the value of the variables in the scope of the functions. However,
+          the search is in a lexical manner. First of all the engine looks out
+          in the current scope of the current function. If not found, it finds
+          it in the parent funtion. <br />
+          <br />
+          Lexical Scoping: In a nested group of functions, accessing the
+          variables which are declared outside the function call is lexical
+          scoping also referred to as Static Scope. In simple words, JavaScript
+          looks for variables in a way, If it can’t find a variable in its local
+          Execution Context, it will look for it in its calling context. And if
+          not found in its calling context. Repeatedly, until it is looking in
+          the global execution context. And if it does not find then, it’s
+          undefined.
+        </li>
+        <li id="deleg">
+          Event Delegation is basically a pattern to handle events efficiently.
+          Instead of adding an event listener to each and every similar element,
+          we can add an event listener to a parent element and call an event on
+          a particular target using the .target property of the event object.
+        </li>
+        <li id="debounce">
+          Debouncing in JavaScript is a practice used to improve browser
+          performance. There might be some functionality in a web page which
+          requires time-consuming computations. If such a method is invoked
+          frequently, it might greatly affect the performance of the browser, as
+          JavaScript is a single threaded language. Debouncing is a programming
+          practice used to ensure that time-consuming tasks do not fire so
+          often, that it stalls the performance of the web page. In other words,
+          it limits the rate at which a function gets invoked.
+        </li>
+        <li id="throt">
+          Throttling or sometimes is also called throttle function is a practice
+          used in websites. Throttling is used to call a function after every
+          millisecond or a particular interval of time only the first click is
+          executed immediately.
+        </li>
+        <li id="cors">
+          CORS is a mechanism which aims to allow requests made on behalf of you
+          and at the same time block some requests made by rogue JS and is
+          triggered whenever you are making an HTTP request to: <br />
+          a different domain <br />
+          a different sub-domain <br />
+          a different port
+        </li>
+        <li id="preflight">
+          A preflight request is a small request that is sent by the browser
+          before the actual request. It contains information like which HTTP
+          method is used, as well as if any custom HTTP headers are present. The
+          preflight gives the server a chance to examine what the actual request
+          will look like before it’s made. The server can then indicate whether
+          the browser should send the actual request, or return an error to the
+          client without sending the request.
+        </li>
+        <li id="set-time">
+          The setTimeout() method calls a function or evaluates an expression
+          after a specified number of milliseconds.
+        </li>
+        <li id="set-interval">
+          The setInterval() method calls a function or evaluates an expression
+          at specified intervals (in milliseconds). <br />
+          The setInterval() method will continue calling the function until
+          clearInterval() is called, or the window is closed.
         </li>
       </ol>
     </div>
