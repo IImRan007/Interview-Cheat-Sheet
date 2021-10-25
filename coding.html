@@ -82,6 +82,42 @@
         <li>
           <a href="#del">Deleting the first node in a singly linked list</a>
         </li>
+        <li>
+          <a href="#last">Deleting the last node in a singly linked list</a>
+        </li>
+        <li>
+          <a href="#pos"
+            >Deleting a node from given random position in a singly linked
+            list</a
+          >
+        </li>
+        <li>
+          <a href="#whole">Deleting the singly linked list</a>
+        </li>
+        <li>
+          <a href="#cre">Creating Stack</a>
+        </li>
+        <li>
+          <a href="#pu">Insert an Element to the Top of Stack (Push)</a>
+        </li>
+        <li>
+          <a href="#len">Returns the Length of the Stack</a>
+        </li>
+        <li>
+          <a href="#top">Get the Top Element of the Stack</a>
+        </li>
+        <li>
+          <a href="#emp">Checks If the Stack Is Empty (isEmpty)</a>
+        </li>
+        <li>
+          <a href="#pop">Deletes an Element at the Top of the Stack (Pop)</a>
+        </li>
+        <li>
+          <a href="#print">Print the Elements of the Stack (Print)</a>
+        </li>
+        <li>
+          <a href="#rev">Reverse the Stack</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -430,7 +466,149 @@
             }<br />
           </code>
         </li>
-        <li id="del"></li>
+        <li id="del">
+          The first node in a linked list is pointed by the head pointer. To
+          perform a delete operation at the beginning of the list, we will have
+          to make the next node to the head node as the new head. <br />
+          <code>
+            LinkedList.prototype.deleteFirstNode = function(){ <br />
+            if(!this.head){<br />
+            return;<br />
+            }<br />
+            this.head = this.head.next;<br />
+            return this.head;<br />
+            }<br />
+          </code>
+        </li>
+        <li id="last">
+          To remove the last node from the list, we will first have to traverse
+          the list to find the last node and at the same time maintain an extra
+          pointer to point at the node before the last node. To delete the last
+          node, we will then set the next pointer of the node before the last
+          node to null.
+        </li>
+        <li id="pos">
+          We will first have to traverse the list to find the desired node to be
+          deleted and at the same time maintain an extra pointer to point at the
+          node before the desired node. <br />
+          <code>
+            inkedList.prototype.deleteAt = function(index){<br />
+            // when list is empty i.e. head = null<br />
+            if (!this.head) {<br />
+            this.head = new Node(data);<br />
+            return;<br />
+            }<br />
+            // node needs to be deleted from the front of the list i.e. before
+            the head.<br />
+            if (index === 0) {<br />
+            this.head = this.head.next;<br />
+            return;<br />
+            }<br />
+            // else, use getAt() to find the previous node.<br />
+            const previous = this.getAt(index - 1);<br />
+
+            if (!previous || !previous.next) {<br />
+            return;<br />
+            }<br />
+
+            previous.next = previous.next.next; <br />
+            return this.head<br />
+            }
+          </code>
+        </li>
+        <li id="whole">
+          LinkedList.prototype.deleteList = function(){ <br />
+          this.head = null; <br />
+          }
+        </li>
+        <li id="cre">
+          class Stack { <br />
+          constructor(){ <br />
+          this.data = []; <br />
+          this.top = 0; <br />
+          } <br />
+          } <br />
+          The Stack class has two attributes: <br />
+          data → Is an array in which we store the value. <br />
+          top → Points to the top element index.
+        </li>
+        <li id="pu">
+          When we push an element to the stack, we have to store it in the top
+          position of data and need to increment the top variable so that the
+          top will point to the next empty place. <br />
+          <code>
+            push(element) {<br />
+            this.data[this.top] = element;<br />
+            this.top = this.top + 1;<br />
+            }<br />
+          </code>
+        </li>
+        <li id="len">
+          To get the length of the stack, we can return the top value. <br />
+          <code
+            >length() { <br />
+            return this.top; <br />
+            }</code
+          >
+        </li>
+        <li id="top">
+          To get the peek element of the stack, we can use the top-1 attribute
+          of Stack class: <br />
+          <code
+            >peek() { <br />
+            return this.data[this.top -1 ]; <br />
+            }</code
+          >
+          <br />In above code we used top-1 because the top points to the
+          position where the new element is to be inserted, therefore the top
+          empty location.
+        </li>
+        <li id="emp">
+          If the value of the top is equal to 0 then there is no element in the
+          Stack. <br />
+          <code
+            >isEmpty() { <br />
+            return this.top === 0; <br />
+            }</code
+          >
+        </li>
+        <li id="pop">
+          When we pop an element from the stack, we have to remove the element
+          in the top position of data and need to decrement the top variable so
+          that the top will point to the previous element’s position. We need to
+          ensure that the stack is not empty, otherwise the value of the top
+          will be decremented below zero. So, the above code will be like this:
+          <br />
+          <code
+            >pop() { <br />
+            if( this.isEmpty() === false ) {<br />
+            this.top = this.top -1;<br />
+            return this.data.pop(); // removes the last element<br />
+            }<br />
+            }</code
+          >
+        </li>
+        <li id="print">
+          function print() { <br />
+          var top = this.top - 1; // because top points to index where new
+          element to be inserted<br />
+          while(top >= 0) { // print upto 0th index<br />
+          console.log(this.data[top]);<br />
+          top--;<br />
+          }<br />
+          }
+        </li>
+        <li id="rev">
+          function reverse() {<br />
+          this._reverse(this.top - 1 );<br />
+          }<br />
+          function _reverse(index) {<br />
+          if(index != 0) {<br />
+          this._reverse(index-1);<br />
+          }<br />
+          console.log(this.data[index]);<br />
+          }
+        </li>
       </ol>
     </div>
   </body>
