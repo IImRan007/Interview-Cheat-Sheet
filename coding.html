@@ -118,6 +118,9 @@
         <li>
           <a href="#rev">Reverse the Stack</a>
         </li>
+        <li>
+          <a href="#queue">Implementing a queue in JavaScript</a>
+        </li>
       </ol>
     </div>
     <div class="answers">
@@ -608,6 +611,50 @@
           }<br />
           console.log(this.data[index]);<br />
           }
+        </li>
+        <li id="queue">
+          Constant time: O(1) <br />
+          <code>
+            class Queue {<br />
+            constructor() {<br />
+            this.items = {};<br />
+            this.headIndex = 0;<br />
+            this.tailIndex = 0;<br />
+            }<br />
+            enqueue(item) {<br />
+            this.items[this.tailIndex] = item;<br />
+            this.tailIndex++;<br />
+            }<br />
+            dequeue() {<br />
+            const item = this.items[this.headIndex];<br />
+            delete this.items[this.headIndex];<br />
+            this.headIndex++;<br />
+            return item;<br />
+            }<br />
+            peek() {<br />
+            return this.items[this.headIndex];<br />
+            }<br />
+            get length() {<br />
+            return this.tailIndex - this.headIndex;<br />
+            }<br />
+            }<br />
+            const queue = new Queue();<br />
+            queue.enqueue(7);<br />
+            queue.enqueue(2);<br />
+            queue.enqueue(6);<br />
+            queue.enqueue(4);<br />
+            queue.dequeue(); // => 7<br />
+            queue.peek(); // => 2<br />
+            queue.length; // => 3 <br />
+            const queue = new Queue() is how you create an instance of a
+            queue.<br />
+            Calling queue.enqueue(7) method enqueues the item 7 into the
+            queue.<br />
+            queue.dequeue() dequeues a head item from the queue, while
+            queue.peek() just peeks the item at the head.<br />
+            Finally, queue.length shows how many items are still in the
+            queue.<br />
+          </code>
         </li>
       </ol>
     </div>
