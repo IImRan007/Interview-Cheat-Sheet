@@ -160,3 +160,15 @@
 // let result = countVowel("Hello my name is Imran");
 
 // console.log(result);
+
+// Finding missing number from array
+// function missing(arr) {
+//   var x = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     x = x + 1;
+//     if (arr[i] != x) {
+//       console.log(x);
+//     }
+//   }
+// }
+// missing([1, 2, 3, 4, 5, 6, 7, 8, 10]);

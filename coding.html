@@ -45,6 +45,7 @@
             >How will you remove duplicates from a JS array?</a
           >
         </li>
+        <li><a href="#miss">Find missing number in an array</a></li>
         <li><a href="#string">Reverse string</a></li>
         <li><a href="#longest">Finding longest word in a string</a></li>
         <li>
@@ -228,6 +229,27 @@
             } <br />
             }); <br />
             console.log(unique);
+          </code>
+        </li>
+        <li id="miss">
+          Steps: <br />
+          Set up the function <br />
+          Create a variable that counts for you <br />
+          Create a loop that runs through the array <br />
+          Use a counter and compare it to the elements of the array <br />
+          Thats it! If the counter is not equal to the corresponding element in
+          the array then return the missing number! <br />
+          <code>
+            function missing(arr) {<br />
+            var x = 0;<br />
+            for (var i = 0; i < arr.length; i++) {<br />
+            x = x + 1;<br />
+            if (arr[i] != x) {<br />
+            console.log(x);<br />
+            }<br />
+            }<br />
+            }<br />
+            missing([1, 2, 3, 4, 5, 6, 7, 8, 10]);
           </code>
         </li>
         <li id="string">
